@@ -11,7 +11,7 @@ export class BaseService implements IBaseService {
     this.fetch = fetch || globalThis.fetch;
   }
 
-  async get(path: string, params?: Record<string, string>) {
+  async get(path: string, params?: Record<string, any>) {
     const response = await this.fetch(
       `${this.apiUrl}/${path}?${new URLSearchParams(params).toString()}`
     );
