@@ -43,6 +43,7 @@ This project uses the following libraries:
 - [Jest](https://jestjs.io/) - JavaScript testing framework.
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) - Testing utilities for React.
 - [Lucide](https://lucide.dev/) - Icon library.
+- [Styled Components](https://styled-components.com/) - CSS-in-JS library.
 
 ## Technical Decisions
 
