@@ -1,16 +1,24 @@
 "use client";
 import { HeaderProps } from "./types";
-import { HeaderContainer, LeftContent, RightContent } from "./styles";
+import {
+  CartQuantityTag,
+  HeaderContainer,
+  LeftContent,
+  RightContent,
+} from "./styles";
 import { Button } from "@/components/core/Button";
 import { Text } from "@/components/core/Text";
 import { ArrowLeft, ShoppingBasket } from "lucide-react";
 import Link from "next/link";
+import { useCart } from "@/providers/CartProvider";
 
 export const Header = ({
   title,
   backButtonLink,
   onBackButtonClick,
 }: HeaderProps) => {
+  const { getTotalItems } = useCart();
+
   return (
     <HeaderContainer data-testid="header">
       <LeftContent data-testid="header-left-content">
@@ -30,13 +38,18 @@ export const Header = ({
         </Text>
       </LeftContent>
       <RightContent data-testid="header-right-content">
-        <Button
-          onClick={onBackButtonClick}
-          variant="icon"
-          data-testid="header-cart-button"
-        >
-          <ShoppingBasket />
-        </Button>
+        {getTotalItems() > 0 && (
+          <CartQuantityTag data-testid="header-cart-quantity-tag">
+            <Text color="black" as="span" weight="bold">
+              {getTotalItems()}
+            </Text>
+          </CartQuantityTag>
+        )}
+        <Link href="/cart">
+          <Button variant="icon" data-testid="header-cart-button">
+            <ShoppingBasket />
+          </Button>
+        </Link>
       </RightContent>
     </HeaderContainer>
   );

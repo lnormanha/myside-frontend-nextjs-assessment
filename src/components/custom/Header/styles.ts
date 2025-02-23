@@ -29,3 +29,16 @@ export const RightContent = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const CartQuantityTag = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+`;

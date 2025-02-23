@@ -31,12 +31,16 @@ export const Button = ({
     icon: "#FFF",
   };
 
+  const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    onClick?.(e);
+  };
+
   if (variant === "icon") {
     return (
       <Component
         size="icon"
         disabled={disabled}
-        onClick={onClick}
+        onClick={handleOnClick}
         bgColor={bgColor}
         hoverBgColor={hoverBgColor}
         textStyle={textStyle}
@@ -51,7 +55,7 @@ export const Button = ({
     <Component
       size={size}
       disabled={disabled}
-      onClick={onClick}
+      onClick={handleOnClick}
       bgColor={bgColor}
       hoverBgColor={hoverBgColor}
       textStyle={textStyle}

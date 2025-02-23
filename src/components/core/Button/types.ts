@@ -10,6 +10,6 @@ export interface ButtonProps extends React.PropsWithChildren {
   bgColor?: string;
   hoverBgColor?: string;
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   "data-testid"?: string;
 }

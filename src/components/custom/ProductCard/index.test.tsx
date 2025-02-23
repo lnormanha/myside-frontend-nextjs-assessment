@@ -14,6 +14,7 @@ describe("ProductCard", () => {
   it("Should render the product card", () => {
     render(
       <ProductCard
+        id={1}
         title="Product 1"
         price={100}
         image="https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg"
@@ -26,6 +27,7 @@ describe("ProductCard", () => {
   it("Should render the product card image", () => {
     render(
       <ProductCard
+        id={1}
         title="Product 1"
         price={100}
         image="https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg"
@@ -38,6 +40,7 @@ describe("ProductCard", () => {
   it("Should render the product card title", () => {
     render(
       <ProductCard
+        id={1}
         title="Product 1"
         price={100}
         image="https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg"
@@ -52,6 +55,7 @@ describe("ProductCard", () => {
   it("Should render the product card price", () => {
     render(
       <ProductCard
+        id={1}
         title="Product 1"
         price={100}
         image="https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg"
@@ -66,6 +70,7 @@ describe("ProductCard", () => {
   it("Should render the product card description", () => {
     render(
       <ProductCard
+        id={1}
         title="Product 1"
         price={100}
         image="https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg"

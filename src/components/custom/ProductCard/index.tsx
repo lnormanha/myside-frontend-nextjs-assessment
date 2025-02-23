@@ -4,14 +4,19 @@ import { ProductCardProps } from "./types";
 import { Container } from "./styles";
 import { Text } from "@/components/core/Text";
 import Link from "next/link";
+import { useCart } from "@/providers/CartProvider";
+import { Button } from "@/components/core/Button";
 
-export const ProductCard = ({
-  id,
-  title,
-  price,
-  image,
-  description,
-}: ProductCardProps) => {
+export const ProductCard = ({ product }: ProductCardProps) => {
+  const { id, title, price, image, description } = product;
+
+  const { addProduct } = useCart();
+
+  const handleAddProduct = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    addProduct(product);
+  };
+
   return (
     <Link href={`/products/${id}`}>
       <Container data-testid="product-card">
@@ -20,10 +25,8 @@ export const ProductCard = ({
           alt={title.slice(0, 20)}
           src={image}
           width={300}
-          height={300}
+          height={250}
           style={{
-            width: "100%",
-            height: "100%",
             borderRadius: "1rem",
             objectFit: "cover",
           }}
@@ -45,6 +48,9 @@ export const ProductCard = ({
         <Text color="#FFF" data-testid="product-card-description">
           {description.slice(0, 50)}...
         </Text>
+        <Button size="full" onClick={handleAddProduct}>
+          Add to Cart
+        </Button>
       </Container>
     </Link>
   );

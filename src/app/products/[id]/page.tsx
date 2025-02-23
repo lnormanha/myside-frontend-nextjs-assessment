@@ -18,7 +18,7 @@ export default async function ProductPage({
 
   return (
     <div className={styles.page}>
-      <Header title="MySide Fake Store" backButtonLink="/" />
+      <Header title="MySide Fake Store - Product" backButtonLink="/" />
       <main className={styles.main}>
         <div className={styles["image-container"]}>
           <Image

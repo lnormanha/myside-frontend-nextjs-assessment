@@ -1,7 +1,5 @@
+import { Product } from "@/types/products";
+
 export interface ProductCardProps {
-  id: number;
-  title: string;
-  price: number;
-  image: string;
-  description: string;
+  product: Product;
 }
