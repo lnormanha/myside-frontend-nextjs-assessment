@@ -10,9 +10,10 @@ const productService = new ProductService();
 export default async function ProductPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const response = await productService.getProductById(Number(params.id));
+  const { id } = await params;
+  const response = await productService.getProductById(Number(id));
   const product: Product = response.product;
 
   return (
