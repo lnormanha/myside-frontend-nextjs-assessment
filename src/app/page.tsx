@@ -8,16 +8,17 @@ import { Header } from "@/components/custom/Header";
 const productService = new ProductService();
 
 interface HomeProps {
-  searchParams: {
+  searchParams: Promise<{
     page?: string;
     limit?: string;
     type?: string;
     sort?: string;
     search?: string;
-  };
+  }>;
 }
+
 export default async function Home({ searchParams }: HomeProps) {
-  const { page, type, sort, search, limit } = searchParams;
+  const { page, type, sort, search, limit } = await searchParams;
   const pageNumber = page ? parseInt(page) : 1;
   const limitNumber = limit ? parseInt(limit) : 10;
 

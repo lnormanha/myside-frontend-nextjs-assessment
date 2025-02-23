@@ -32,6 +32,11 @@ export const Text = ({
 
   const Component = components[as];
 
+  const text = autoCapitalize
+    ? (children?.toString() || "").slice(0, 1).toUpperCase() +
+      (children?.toString() || "").slice(1)
+    : children?.toString() || "";
+
   return (
     <Component
       size={size}
@@ -40,10 +45,7 @@ export const Text = ({
       align={align}
       data-testid={`${dataTestId}-variant-${as}`}
     >
-      {autoCapitalize
-        ? children?.toString().slice(0, 1).toUpperCase() +
-          children?.toString().slice(1)
-        : children}
+      {text}
     </Component>
   );
 };
