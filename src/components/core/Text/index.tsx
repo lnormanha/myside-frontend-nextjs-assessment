@@ -35,7 +35,7 @@ export const Text = ({
   const text = autoCapitalize
     ? (children?.toString() || "").slice(0, 1).toUpperCase() +
       (children?.toString() || "").slice(1)
-    : children?.toString() || "";
+    : children;
 
   return (
     <Component

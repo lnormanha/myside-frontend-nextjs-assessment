@@ -44,6 +44,21 @@ const cartReducer = (
         products: newCartProducts,
       };
 
+    case CartActionTypes.DECREMENT_PRODUCT:
+      const id = action.payload as number;
+      return {
+        ...state,
+        products: state.products.map((product) => {
+          if (product.id === id) {
+            if (product.quantity === 1) {
+              return { ...product, quantity: 1 };
+            }
+            return { ...product, quantity: product.quantity - 1 };
+          }
+          return product;
+        }),
+      };
+
     case CartActionTypes.REMOVE_PRODUCT:
       return {
         ...state,
@@ -78,6 +93,11 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
     dispatch({ type: CartActionTypes.CLEAR_CART, payload: undefined });
   };
 
+  const decrementProduct = (id?: number) => {
+    if (!id) return;
+    dispatch({ type: CartActionTypes.DECREMENT_PRODUCT, payload: id });
+  };
+
   const getProducts = () => {
     return state.products;
   };
@@ -95,6 +115,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         clearCart,
         getProducts,
         getTotalItems,
+        decrementProduct,
       }}
     >
       {children}
