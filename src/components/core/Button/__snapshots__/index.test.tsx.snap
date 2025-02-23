@@ -1,0 +1,663 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Props - Bg Color Should render a button with a bg color 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: red;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  bgcolor="red"
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Disabled Should render a disabled button 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+  disabled=""
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Hover Bg Color Should render a button with a hover bg color 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: red;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: red;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+  hoverbgcolor="red"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Size Should render a button with a full size 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  width: 100%;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Size Should render a button with a large size 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 50px;
+  width: 300px;
+  --text-size: 20px;
+  --text-weight: 500;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Size Should render a button with a medium size 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Size Should render a button with a small size 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 30px;
+  width: 100px;
+  --text-size: 12px;
+  --text-weight: 400;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Variant Should render a button with a outline variant 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #ffffff0c;
+  --text-color: #fff;
+  border: 1px solid #ffffff;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#FFF);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#FFF"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Variant Should render a button with a primary variant 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Props - Variant Should render a button with a secondary variant 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: #303030;
+  color: #FFF;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #1a1a1a;
+  --text-color: #fff;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#FFF);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#FFF"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;
+
+exports[`Button Should render a button 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 40px;
+  --text-size: 16px;
+  --text-weight: 400;
+  height: 40px;
+  width: 200px;
+  --text-size: 16px;
+  --text-weight: 400;
+  background-color: #FFF;
+  color: #000;
+}
+
+.c0:hover {
+  background-color: #000;
+  --text-color: "#fff";
+}
+
+.c0:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  background-color: #8a8a8a;
+  --text-color: #525252;
+}
+
+.c1 {
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
+  text-align: left;
+  font-weight: var(--text-weight,bold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
+}
+
+<button
+  class="c0"
+>
+  <p
+    class="c1"
+    color="#000"
+    data-testid="core-text-variant-p"
+    weight="bold"
+  >
+    Click me
+  </p>
+</button>
+`;

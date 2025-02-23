@@ -2,11 +2,12 @@
 
 exports[`Text Props - Size Should render a 'p' tag with a 'align' prop 1`] = `
 .c0 {
-  font-family: "Inter",sans-serif;
-  font-weight: normal;
-  color: #000;
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
   text-align: center;
-  font-size: 16px;
+  font-weight: var(--text-weight,normal);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
 }
 
 <p
@@ -20,11 +21,12 @@ exports[`Text Props - Size Should render a 'p' tag with a 'align' prop 1`] = `
 
 exports[`Text Props - Size Should render a 'p' tag with a 'color' prop 1`] = `
 .c0 {
-  font-family: "Inter",sans-serif;
-  font-weight: normal;
-  color: red;
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,red);
   text-align: left;
-  font-size: 16px;
+  font-weight: var(--text-weight,normal);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
 }
 
 <p
@@ -38,11 +40,12 @@ exports[`Text Props - Size Should render a 'p' tag with a 'color' prop 1`] = `
 
 exports[`Text Props - Size Should render a 'p' tag with a 'size' prop 1`] = `
 .c0 {
-  font-family: "Inter",sans-serif;
-  font-weight: normal;
-  color: #000;
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
   text-align: left;
-  font-size: 16px;
+  font-weight: var(--text-weight,normal);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
 }
 
 <p
@@ -55,17 +58,18 @@ exports[`Text Props - Size Should render a 'p' tag with a 'size' prop 1`] = `
 
 exports[`Text Props - Size Should render a 'p' tag with a 'weight' prop 1`] = `
 .c0 {
-  font-family: "Inter",sans-serif;
-  font-weight: bold;
-  color: #000;
+  font-family: "Geist",sans-serif;
+  color: var(--text-color,#000);
   text-align: left;
-  font-size: 16px;
+  font-weight: var(--text-weight,semibold);
+  font-size: var(--text-size,16px);
+  --text-size: 16px;
 }
 
 <p
   class="c0"
   data-testid="core-text-variant-p"
-  weight="bold"
+  weight="semibold"
 >
   Hello
 </p>

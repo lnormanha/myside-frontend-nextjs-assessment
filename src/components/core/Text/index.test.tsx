@@ -69,7 +69,10 @@ describe("Text", () => {
           Hello
         </Text>
       );
-      expect(container.firstChild).toHaveStyleRule("font-size", "16px");
+      expect(container.firstChild).toHaveStyleRule(
+        "font-size",
+        "var(--text-size,16px)"
+      );
       expect(container.firstChild).toMatchSnapshot();
     });
 
@@ -80,18 +83,24 @@ describe("Text", () => {
         </Text>
       );
 
-      expect(container.firstChild).toHaveStyleRule("color", "red");
+      expect(container.firstChild).toHaveStyleRule(
+        "color",
+        "var(--text-color,red)"
+      );
       expect(container.firstChild).toMatchSnapshot();
     });
 
     it("Should render a 'p' tag with a 'weight' prop", () => {
       const { container } = render(
-        <Text as="p" weight="bold">
+        <Text as="p" weight="semibold">
           Hello
         </Text>
       );
 
-      expect(container.firstChild).toHaveStyleRule("font-weight", "bold");
+      expect(container.firstChild).toHaveStyleRule(
+        "font-weight",
+        "var(--text-weight,semibold)"
+      );
       expect(container.firstChild).toMatchSnapshot();
     });
 
