@@ -26,12 +26,12 @@ Vercel Link: https://myside-frontend-nextjs-assessment.vercel.app/
 
 ## File and Folder Naming Conventions
 
-- index.tsx: Main file for the component
-- styles.module.css: Styles for pages
-- styles.ts: Styles for components
-- types.ts: Interface and types for the component
-- utils.ts: Utility functions for the component
-- folders: main folder (app, components, providers, mocks, pages, services, lib, types) uses kebab-case, and the sub-folders uses PascalCase.
+- **index.tsx**: Main file for the component
+- **styles.module.css**: Styles for pages
+- **styles.ts**: Styles for components
+- **types.ts**: Interface and types for the component
+- **utils.ts**: Utility functions for the component
+- **folders**: main folder (app, components, providers, mocks, pages, services, lib, types) uses kebab-case, and the sub-folders uses PascalCase.
 
 ## Libraries
 
@@ -46,21 +46,21 @@ This project uses the following libraries:
 
 ## Technical Decisions
 
-- **State Management**: [Context API], Local State and Hooks.
-- **Styling**: [CSS Modules] and [Styled Components].
-- **Routing**: [Next.js Routing]
-- **Testing**: [React Testing Library] and [Jest].
-- **API Calls**: [Fetch API] and [Dependency Injection] for mocking or customizing the API.
+- **State Management**: **Context API**, Local State and Hooks.
+- **Styling**: **CSS Modules** and **Styled Components**.
+- **Routing**: **Next.js Routing**.
+- **Testing**: **React Testing Library** and **Jest**.
+- **API Calls**: **Fetch API** and **Dependency Injection** for mocking or customizing the API.
 
 ## What I Could Improve
 
-- [Error Handling] - Add a better error handling strategy.
-- [Theming] - Add a better theming strategy, with defined colors, fonts, etc.
-- [State Management] - Use a better state management solution, like [Zustand] or [Redux].
-- [Styling] - Improve the css.modules organization, add default styles for both css modules and styled components.
-- [Design] - Improve the design of the app, add animations, transitions, etc.
-- [Testing] - Add more tests, both unit and integration, and more complex scenarions. I ran out of time to add more tests.
-- [Documentation] - Add JSDoc to the code.
+- **Error Handling** - Add a better error handling strategy.
+- **Theming** - Add a better theming strategy, with defined colors, fonts, etc.
+- **State Management** - Use a better state management solution, like **Zustand** or **Redux**.
+- **Styling** - Improve the css.modules organization, add default styles for both css modules and styled components.
+- **Design** - Improve the design of the app, add animations, transitions, etc.
+- **Testing** - Add more tests, both unit and integration, and more complex scenarions. I ran out of time to add more tests.
+- **Documentation** - Add JSDoc to the code.
 
 ## Getting Started
 
