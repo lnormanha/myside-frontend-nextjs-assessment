@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import "jest-styled-components";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Button } from "./index";
 import { ServerStyleSheet } from "styled-components";
 

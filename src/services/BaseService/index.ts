@@ -3,6 +3,7 @@ import { IBaseService } from "./types";
 export class BaseService implements IBaseService {
   readonly apiUrl: string;
   readonly fetch: typeof globalThis.fetch;
+
   // Only GET method as it's the only we'll use for this assessment
   // POST, PUT, PATCH, DELETE methods can be added if needed
 
@@ -11,6 +12,7 @@ export class BaseService implements IBaseService {
     this.fetch = fetch || globalThis.fetch;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async get(path: string, params?: Record<string, any>) {
     const response = await this.fetch(
       `${this.apiUrl}/${path}?${new URLSearchParams(params).toString()}`

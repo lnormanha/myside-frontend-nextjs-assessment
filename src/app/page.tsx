@@ -18,7 +18,7 @@ interface HomeProps {
 }
 export default async function Home({ searchParams }: HomeProps) {
   const { page, type, sort, search, limit } = searchParams;
-  let pageNumber = page ? parseInt(page) : 1;
+  const pageNumber = page ? parseInt(page) : 1;
   const limitNumber = limit ? parseInt(limit) : 10;
 
   let productsResponse: IGetProductsResponse;

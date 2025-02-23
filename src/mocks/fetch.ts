@@ -1,5 +1,5 @@
 export const mockedFetch: typeof globalThis.fetch = jest.fn(
-  (input: string | URL | globalThis.Request, init?: RequestInit) => {
+  (input: string | URL | globalThis.Request) => {
     // Validate URL
     if (typeof input === "string" || input instanceof URL) {
       try {
