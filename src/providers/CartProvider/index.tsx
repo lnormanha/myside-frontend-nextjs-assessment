@@ -3,7 +3,6 @@ import React, { createContext, useContext, useReducer, ReactNode } from "react";
 import { CartActionTypes, CartProduct, CartState } from "./types";
 import { CartContextType } from "./types";
 import { Product } from "@/types/products";
-import { A } from "@/components/core/Text/styles";
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 

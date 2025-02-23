@@ -5,4 +5,5 @@ export interface CartProductItemProps {
   onAddProduct: (product: CartProduct) => void;
   onRemoveProduct: (id: number) => void;
   onDecrementProduct: (id: number) => void;
+  "data-testid"?: string;
 }

@@ -7,7 +7,10 @@ import Link from "next/link";
 import { useCart } from "@/providers/CartProvider";
 import { Button } from "@/components/core/Button";
 
-export const ProductCard = ({ product }: ProductCardProps) => {
+export const ProductCard = ({
+  product,
+  "data-testid": dataTestId = "product-card",
+}: ProductCardProps) => {
   const { id, title, price, image, description } = product;
 
   const { addProduct } = useCart();
@@ -17,11 +20,13 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     addProduct(product);
   };
 
+  const dynamicDataTestId = `${dataTestId}-${id}`;
+
   return (
     <Link href={`/products/${id}`}>
-      <Container data-testid="product-card">
+      <Container data-testid={dynamicDataTestId}>
         <Image
-          data-testid="product-card-image"
+          data-testid={`${dynamicDataTestId}-image`}
           alt={title.slice(0, 20)}
           src={image}
           width={300}
@@ -31,24 +36,28 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             objectFit: "cover",
           }}
         />
-        <Text as="h3" color="#FFF" data-testid="product-card-title">
+        <Text as="h3" color="#FFF" data-testid={`${dynamicDataTestId}-title`}>
           {title.slice(0, 20)}...
         </Text>
         <Text
           as="h4"
           weight="bold"
           color="#FFF"
-          data-testid="product-card-price"
+          data-testid={`${dynamicDataTestId}-price`}
         >
           {Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
           }).format(price)}
         </Text>
-        <Text color="#FFF" data-testid="product-card-description">
+        <Text color="#FFF" data-testid={`${dynamicDataTestId}-description`}>
           {description.slice(0, 50)}...
         </Text>
-        <Button size="full" onClick={handleAddProduct}>
+        <Button
+          size="full"
+          onClick={handleAddProduct}
+          data-testid={`${dynamicDataTestId}-add-to-cart`}
+        >
           Add to Cart
         </Button>
       </Container>

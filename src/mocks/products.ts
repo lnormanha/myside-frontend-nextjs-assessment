@@ -1,10 +1,27 @@
-const mockProduct = {
+import { CartProduct } from "@/providers/CartProvider/types";
+import { Product } from "@/types/products";
+
+// Mocked Products
+export const mockProduct: Product = {
   id: 1,
   title:
     "Sony WH-1000XM3 Bluetooth Wireless Over Ear Headphones with Mic (Silver)",
   image:
     "https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692947383286-714WUJlhbLS._SL1500_.jpg",
   price: 773,
+  description:
+    "The Sony WH-1000XM3 Bluetooth Wireless Over Ear Headphones with Mic (Silver) is a high-quality audio device that offers a comfortable fit and excellent sound quality. It features Bluetooth connectivity, a built-in microphone, and a sleek design. The headphones are designed for use with smartphones, tablets, and other devices that support Bluetooth audio.",
+  category: "audio",
+  brand: "Sony",
+  model: "WH-1000XM3",
+  color: "Silver",
+  discount: 0,
+  popular: true,
+};
+
+export const mockCartProduct: CartProduct = {
+  ...mockProduct,
+  quantity: 1,
 };
 
 const mockCategories = ["audio", "electronics", "fashion"];

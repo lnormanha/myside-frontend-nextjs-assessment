@@ -13,9 +13,12 @@ export const CartProductItem = ({
   onRemoveProduct,
   onAddProduct,
   onDecrementProduct,
+  "data-testid": dataTestId = "cart-product-item",
 }: CartProductItemProps) => {
+  const dynamicDataTestId = `${dataTestId}-${product.id}`;
+
   return (
-    <Container>
+    <Container data-testid={dynamicDataTestId}>
       <HStack alignItems="center" justifyContent="space-between">
         <Image
           src={product.image}
@@ -26,10 +29,17 @@ export const CartProductItem = ({
             borderRadius: "1rem",
             objectFit: "cover",
           }}
+          data-testid={`${dynamicDataTestId}-image`}
         />
         <VStack>
-          <Text as="h4">{product.title}</Text>
-          <Text as="h4" weight="bold">
+          <Text as="h4" data-testid={`${dynamicDataTestId}-title`}>
+            {product.title}
+          </Text>
+          <Text
+            as="h4"
+            weight="bold"
+            data-testid={`${dynamicDataTestId}-price`}
+          >
             {Intl.NumberFormat("pt-BR", {
               style: "currency",
               currency: "BRL",
@@ -38,20 +48,39 @@ export const CartProductItem = ({
         </VStack>
       </HStack>
       <HStack alignItems="center">
-        <Button onClick={() => onDecrementProduct(product.id)} variant="icon">
+        <Button
+          onClick={() => onDecrementProduct(product.id)}
+          variant="icon"
+          data-testid={`${dynamicDataTestId}-decrement-button`}
+        >
           <Minus />
         </Button>
-        <Text as="h4" weight="bold">
+        <Text
+          as="h4"
+          weight="bold"
+          data-testid={`${dynamicDataTestId}-quantity`}
+        >
           {product.quantity}
         </Text>
-        <Button onClick={() => onAddProduct(product)} variant="icon">
+        <Button
+          onClick={() => onAddProduct(product)}
+          variant="icon"
+          data-testid={`${dynamicDataTestId}-increment-button`}
+        >
           <Plus />
         </Button>
 
-        <Button onClick={() => onRemoveProduct(product.id)} variant="icon">
+        <Button
+          onClick={() => onRemoveProduct(product.id)}
+          variant="icon"
+          data-testid={`${dynamicDataTestId}-remove-button`}
+        >
           <Trash color="red" />
         </Button>
-        <Button variant="icon">
+        <Button
+          variant="icon"
+          data-testid={`${dynamicDataTestId}-view-product-button`}
+        >
           <Link href={`/products/${product.id}`}>
             <Eye />
           </Link>

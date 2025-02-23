@@ -3,6 +3,11 @@ import "jest-styled-components";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Header } from "./index";
 import { ServerStyleSheet } from "styled-components";
+import { mockCartProvider } from "@/mocks/cart";
+
+jest.mock("@/providers/CartProvider", () => ({
+  useCart: () => mockCartProvider,
+}));
 
 describe("Header", () => {
   let sheet: ServerStyleSheet;
