@@ -10,6 +10,7 @@ export const Text = ({
   color,
   align,
   as = "p",
+  "data-testid": dataTestId = "core-text",
 }: TextProps) => {
   type StyledComponents = {
     [K in typeof as]: ComponentType<TextProps>;
@@ -36,7 +37,7 @@ export const Text = ({
       weight={weight}
       color={color}
       align={align}
-      data-testid={`core-text-variant-${as}`}
+      data-testid={`${dataTestId}-variant-${as}`}
     >
       {children}
     </Component>

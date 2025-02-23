@@ -18,4 +18,5 @@ export interface TextProps extends React.PropsWithChildren {
   weight?: TextWeight;
   color?: string;
   align?: TextAlign;
+  "data-testid"?: string;
 }
