@@ -4,6 +4,7 @@ import { Text } from "@/components/core/Text";
 import Image from "next/image";
 import { Product } from "@/types/products";
 import { Header } from "@/components/custom/Header";
+import { HStack } from "@/components/core/HStack";
 
 const productService = new ProductService();
 
@@ -41,23 +42,23 @@ export default async function ProductPage({
           <Text as="h2" weight="bold">
             {product.title}
           </Text>
-          <div className={styles["h-stack"]}>
+          <HStack>
             <Text as="h3" weight="medium">
               Brand:
             </Text>
             <Text as="h3" weight="medium" autoCapitalize>
               {product.brand}
             </Text>
-          </div>
+          </HStack>
 
-          <div className={styles["h-stack"]}>
+          <HStack>
             <Text as="h4" weight="medium">
               Model:
             </Text>
             <Text as="h4" weight="medium" autoCapitalize>
               {product.model}
             </Text>
-          </div>
+          </HStack>
 
           <div className={styles["product-category-tag"]}>
             <Text as="span" weight="bold">
@@ -77,7 +78,7 @@ export default async function ProductPage({
             <div
               className={styles["color-tag"]}
               style={{ backgroundColor: product.color }}
-            ></div>
+            />
           </div>
           <div className={styles["product-price-info-container"]}>
             <Text as="h3" weight="bold">

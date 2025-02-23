@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import { ProductCard } from "@/components/custom/ProductCard";
 import { ProductService } from "@/services/ProductService";
-import { FilterBar } from "@/components/FilterBar";
+import { FilterBar } from "@/components/custom/FilterBar";
 import { Text } from "@/components/core/Text";
 import { IGetProductsResponse } from "@/services/ProductService/types";
 import { Header } from "@/components/custom/Header";

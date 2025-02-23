@@ -4,7 +4,7 @@ import styles from "./cart.module.css";
 import { Header } from "@/components/custom/Header";
 import { useCart } from "@/providers/CartProvider";
 import { Text } from "@/components/core/Text";
-import { HStack } from "@/styles/global.styles";
+import { HStack } from "@/components/core/HStack";
 import { Button } from "@/components/core/Button";
 export default function Cart() {
   const {
@@ -28,7 +28,7 @@ export default function Cart() {
     <div className={styles.page}>
       <Header title="MySide Fake Store - Cart" backButtonLink="/" />
       <div className={styles.main}>
-        <HStack>
+        <HStack gap="1rem" alignItems="center" justifyContent="space-between">
           <Text as="h4" weight="bold">
             {cartTitle}
           </Text>

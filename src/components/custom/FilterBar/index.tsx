@@ -5,15 +5,14 @@ import {
   Select,
   InputContainer,
   Option,
-  HStack,
 } from "./styles";
 import { FilterBarProps } from "./types";
 import { useState } from "react";
 
 import { Text } from "@/components/core/Text";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Button } from "../core/Button";
-
+import { Button } from "@/components/core/Button";
+import { HStack } from "@/components/core/HStack";
 export const FilterBar = ({
   categories,
   selectedCategory,
@@ -73,7 +72,13 @@ export const FilterBar = ({
         />
       </InputContainer>
 
-      <HStack>
+      <HStack
+        flex={1}
+        gap="1rem"
+        alignItems="flex-end"
+        justifyContent="space-between"
+        width="100%"
+      >
         <InputContainer>
           <Text color="white" weight="medium">
             Category:

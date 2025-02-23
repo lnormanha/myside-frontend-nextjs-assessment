@@ -1,12 +1,13 @@
 "use client";
 import { Button } from "@/components/core/Button";
 import { Container } from "./styles";
-import { HStack, VStack } from "@/styles/global.styles";
 import { CartProductItemProps } from "./types";
 import { Text } from "@/components/core/Text";
 import Image from "next/image";
 import { Eye, Minus, Plus, Trash } from "lucide-react";
 import Link from "next/link";
+import { HStack } from "@/components/core/HStack";
+import { VStack } from "@/components/core/VStack";
 
 export const CartProductItem = ({
   product,
@@ -19,7 +20,7 @@ export const CartProductItem = ({
 
   return (
     <Container data-testid={dynamicDataTestId}>
-      <HStack alignItems="center" justifyContent="space-between">
+      <HStack gap="1rem" alignItems="center" justifyContent="space-between">
         <Image
           src={product.image}
           alt={product.title}
@@ -31,7 +32,7 @@ export const CartProductItem = ({
           }}
           data-testid={`${dynamicDataTestId}-image`}
         />
-        <VStack>
+        <VStack gap="0.5rem">
           <Text as="h4" data-testid={`${dynamicDataTestId}-title`}>
             {product.title}
           </Text>
@@ -47,7 +48,7 @@ export const CartProductItem = ({
           </Text>
         </VStack>
       </HStack>
-      <HStack alignItems="center">
+      <HStack gap="1rem" alignItems="center">
         <Button
           onClick={() => onDecrementProduct(product.id)}
           variant="icon"

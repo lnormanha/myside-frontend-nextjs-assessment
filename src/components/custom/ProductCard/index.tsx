@@ -34,6 +34,7 @@ export const ProductCard = ({
           style={{
             borderRadius: "1rem",
             objectFit: "cover",
+            alignSelf: "center",
           }}
         />
         <Text as="h3" color="#FFF" data-testid={`${dynamicDataTestId}-title`}>

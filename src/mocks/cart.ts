@@ -8,7 +8,3 @@ export const mockCartProvider = {
   getProducts: jest.fn().mockReturnValue([]),
   clearCart: jest.fn(),
 };
-
-export const mockedUseCart = jest.fn().mockReturnValue(mockCartProvider);
-
-// Then in your test file:

@@ -9,23 +9,12 @@ export const Container = styled.div`
   gap: 1rem;
   height: 100px;
   width: 100%;
+
   @media (max-width: 1024px) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start
     gap: 1rem;
-  }
-
-`;
-
-export const HStack = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 1rem;
-  @media (max-width: 1024px) {
-    width: 100%;
   }
 `;
 
@@ -34,6 +23,7 @@ export const InputContainer = styled.div`
   flex: 1;
   flex-direction: column;
   gap: 0.5rem;
+
   @media (max-width: 1024px) {
     width: 100%;
   }
