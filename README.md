@@ -71,13 +71,13 @@ This project uses the following libraries:
 
 ### Installation
 
-1. Clone the repository
+#### 1. Clone the repository
 
 ```bash
 git clone https://github.com/lnormanha/myside-frontend-nextjs-assessment.git
 ```
 
-2. Update Setup (env etc)
+#### 2. Update Setup (env etc)
 
 To set up the environment, create a `.env` file in the root directory and add the following variables, following the `env.example` file:
 
@@ -87,7 +87,7 @@ NEXT_PUBLIC_API_URL=your_api_url
 
 Make sure to replace the placeholders with your actual values.
 
-3. Install dependencies
+#### 3. Install dependencies
 
 ```bash
 npm install
@@ -99,7 +99,7 @@ pnpm install
 bun install
 ```
 
-4. Start the development server
+#### 4. Start the development server
 
 ```bash
 npm run dev
