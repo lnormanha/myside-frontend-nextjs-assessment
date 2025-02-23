@@ -1,3 +1,4 @@
+"use client";
 import { Container } from "./styles";
 import { HStackProps } from "./types";
 

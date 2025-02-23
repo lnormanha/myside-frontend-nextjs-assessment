@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import StyledComponentsRegistry from "@/lib/registry";
-import { CartProvider } from "@/providers/CartProvider";
-
+import { ClientProvider } from "@/providers/ClientProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,9 +25,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <StyledComponentsRegistry>
-          <CartProvider>{children}</CartProvider>
-        </StyledComponentsRegistry>
+        <ClientProvider>{children}</ClientProvider>
       </body>
     </html>
   );

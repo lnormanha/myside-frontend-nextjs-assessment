@@ -14,6 +14,7 @@ export default async function ProductPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+
   const response = await productService.getProductById(Number(id));
   const product: Product = response.product;
 
