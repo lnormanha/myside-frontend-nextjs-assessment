@@ -7,9 +7,10 @@ export const Text = ({
   children,
   size,
   weight,
-  color,
+  color = "white",
   align,
   as = "p",
+  autoCapitalize = false,
   "data-testid": dataTestId = "core-text",
 }: TextProps) => {
   type StyledComponents = {
@@ -39,7 +40,10 @@ export const Text = ({
       align={align}
       data-testid={`${dataTestId}-variant-${as}`}
     >
-      {children}
+      {autoCapitalize
+        ? children?.toString().slice(0, 1).toUpperCase() +
+          children?.toString().slice(1)
+        : children}
     </Component>
   );
 };

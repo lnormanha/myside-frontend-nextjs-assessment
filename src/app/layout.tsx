@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
-import { Header } from "@/components/custom/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
   description: "Front-end assessment for MySide",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -27,10 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <StyledComponentsRegistry>
-          <Header title="MySide Fake Store" />
-          {children}
-        </StyledComponentsRegistry>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

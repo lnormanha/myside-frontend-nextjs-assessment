@@ -10,7 +10,7 @@ export type TextAs =
   | "h6"
   | "a";
 export type TextWeight = "light" | "normal" | "medium" | "semibold" | "bold";
-export type TextAlign = "left" | "center" | "right";
+export type TextAlign = "left" | "center" | "right" | "justify";
 
 export interface TextProps extends React.PropsWithChildren {
   as?: TextAs;
@@ -18,5 +18,6 @@ export interface TextProps extends React.PropsWithChildren {
   weight?: TextWeight;
   color?: string;
   align?: TextAlign;
+  autoCapitalize?: boolean;
   "data-testid"?: string;
 }

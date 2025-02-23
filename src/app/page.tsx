@@ -4,11 +4,10 @@ import { ProductService } from "@/services/ProductService";
 import { FilterBar } from "@/components/FilterBar";
 import { Text } from "@/components/core/Text";
 import { IGetProductsResponse } from "@/services/ProductService/types";
+import { Header } from "@/components/custom/Header";
 const productService = new ProductService();
 
-export default async function Home({
-  searchParams,
-}: {
+interface HomeProps {
   searchParams: {
     page?: string;
     limit?: string;
@@ -16,7 +15,8 @@ export default async function Home({
     sort?: string;
     search?: string;
   };
-}) {
+}
+export default async function Home({ searchParams }: HomeProps) {
   const { page, type, sort, search, limit } = searchParams;
   let pageNumber = page ? parseInt(page) : 1;
   const limitNumber = limit ? parseInt(limit) : 10;
@@ -42,6 +42,7 @@ export default async function Home({
 
   return (
     <div className={styles.page}>
+      <Header title="MySide Fake Store" />
       <main className={styles.main}>
         <FilterBar
           categories={categoriesResponse.categories || []}
@@ -60,6 +61,7 @@ export default async function Home({
               .map((product) => (
                 <ProductCard
                   key={product.id}
+                  id={product.id}
                   title={product.title}
                   price={product.price}
                   image={product.image}
