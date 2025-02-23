@@ -42,30 +42,34 @@ export default async function Home({
 
   return (
     <div className={styles.page}>
-      <FilterBar
-        categories={categoriesResponse.categories || []}
-        selectedCategory={type || ""}
-        selectedSort={sort || ""}
-        search={search || ""}
-      />
       <main className={styles.main}>
-        {productsResponse.products.length > 0 ? (
-          productsResponse.products
-            .filter((product) =>
-              product.title.toLowerCase().includes(search?.toLowerCase() || "")
-            )
-            .map((product) => (
-              <ProductCard
-                key={product.id}
-                title={product.title}
-                price={product.price}
-                image={product.image}
-                description={product.description}
-              />
-            ))
-        ) : (
-          <Text>No products found</Text>
-        )}
+        <FilterBar
+          categories={categoriesResponse.categories || []}
+          selectedCategory={type || ""}
+          selectedSort={sort || ""}
+          search={search || ""}
+        />
+        <div className={styles["products-container"]}>
+          {productsResponse.products.length > 0 ? (
+            productsResponse.products
+              .filter((product) =>
+                product.title
+                  .toLowerCase()
+                  .includes(search?.toLowerCase() || "")
+              )
+              .map((product) => (
+                <ProductCard
+                  key={product.id}
+                  title={product.title}
+                  price={product.price}
+                  image={product.image}
+                  description={product.description}
+                />
+              ))
+          ) : (
+            <Text>No products found</Text>
+          )}
+        </div>
       </main>
       <footer className={styles.footer}></footer>
     </div>
