@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 500px;
   background-color: #222222;
   border-radius: 1rem;
   padding: 2rem;

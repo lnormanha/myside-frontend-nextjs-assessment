@@ -2,9 +2,10 @@ import { Product } from "@/types/products";
 import { IBaseServiceResponse } from "../BaseService/types";
 
 export interface IProductServiceParams {
-  category?: string;
+  type?: string;
   page: number;
   limit: number;
+  sort?: string;
 }
 
 export interface IGetProductsResponse extends IBaseServiceResponse {

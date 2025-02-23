@@ -28,10 +28,10 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 6fr 6fr 6fr 6fr;
+  height: 100%;
   gap: 32px;
-  grid-row-start: 2;
 }
 
 .main ol {

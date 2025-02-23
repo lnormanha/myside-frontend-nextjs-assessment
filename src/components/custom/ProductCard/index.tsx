@@ -14,14 +14,19 @@ export const ProductCard = ({
     <Container data-testid="product-card">
       <Image
         data-testid="product-card-image"
+        alt={title.slice(0, 20)}
         src={image}
-        alt={title}
-        width={100}
-        height={100}
-        style={{ width: "100%", height: "100%", borderRadius: "1rem" }}
+        width={300}
+        height={300}
+        style={{
+          width: "100%",
+          height: "100%",
+          borderRadius: "1rem",
+          objectFit: "cover",
+        }}
       />
       <Text as="h3" color="#FFF" data-testid="product-card-title">
-        {title}
+        {title.slice(0, 20)}...
       </Text>
       <Text as="h4" weight="bold" color="#FFF" data-testid="product-card-price">
         {Intl.NumberFormat("pt-BR", {
@@ -30,7 +35,7 @@ export const ProductCard = ({
         }).format(price)}
       </Text>
       <Text color="#FFF" data-testid="product-card-description">
-        {description}
+        {description.slice(0, 50)}...
       </Text>
     </Container>
   );

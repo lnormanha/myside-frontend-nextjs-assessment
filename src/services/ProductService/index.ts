@@ -1,12 +1,18 @@
 import { BaseService } from "../BaseService";
-import { IProductService, IProductServiceParams } from "./types";
+import {
+  IProductService,
+  IProductServiceParams,
+  IGetProductsResponse,
+} from "./types";
 
 export class ProductService extends BaseService implements IProductService {
   constructor(fetch?: typeof globalThis.fetch) {
     super(fetch);
   }
 
-  async getProducts(params?: IProductServiceParams) {
+  async getProducts(
+    params?: IProductServiceParams
+  ): Promise<IGetProductsResponse> {
     const response = await this.get("/products", params);
     return response;
   }
@@ -17,7 +23,14 @@ export class ProductService extends BaseService implements IProductService {
   }
 
   async getProductsCategories() {
-    const response = await this.get("/products/categories");
+    const response = await this.get("/products/category");
+    return response;
+  }
+
+  async getProductsByCategory(
+    params?: IProductServiceParams
+  ): Promise<IGetProductsResponse> {
+    const response = await this.get(`/products/category`, params);
     return response;
   }
 }

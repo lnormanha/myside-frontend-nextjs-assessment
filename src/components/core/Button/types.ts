@@ -11,5 +11,5 @@ export interface ButtonProps extends React.PropsWithChildren {
   hoverBgColor?: string;
   disabled?: boolean;
   onClick?: () => void;
-  dataTestId?: string;
+  "data-testid"?: string;
 }

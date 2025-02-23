@@ -13,7 +13,7 @@ export const Header = ({ title, onBackButtonClick }: HeaderProps) => {
           <Button
             onClick={onBackButtonClick}
             variant="icon"
-            dataTestId="header-back-button"
+            data-testid="header-back-button"
           >
             <ArrowLeft />
           </Button>
@@ -26,7 +26,7 @@ export const Header = ({ title, onBackButtonClick }: HeaderProps) => {
         <Button
           onClick={onBackButtonClick}
           variant="icon"
-          dataTestId="header-cart-button"
+          data-testid="header-cart-button"
         >
           <ShoppingBasket />
         </Button>

@@ -13,7 +13,7 @@ export const Button = ({
   bgColor,
   textStyle,
   hoverBgColor,
-  dataTestId = "button",
+  "data-testid": dataTestId = "button",
 }: ButtonProps) => {
   const variantsByProp: Record<ButtonVariants, ComponentType<ButtonProps>> = {
     primary: Primary,
