@@ -49,11 +49,17 @@ const fullSizeStyles = css<ButtonProps>`
   width: 100%;
 `;
 
+const iconSizeStyles = css<ButtonProps>`
+  height: 32px;
+  width: 32px;
+`;
+
 const sizesByProp: Record<ButtonSizes, ReturnType<typeof css<ButtonProps>>> = {
   small: smallSizeStyles,
   medium: mediumSizeStyles,
   large: largeSizeStyles,
   full: fullSizeStyles,
+  icon: iconSizeStyles,
 };
 
 export const Primary = styled.button<ButtonProps>`
@@ -88,5 +94,17 @@ export const Outline = styled.button<ButtonProps>`
     background-color: ${(props) => props.hoverBgColor || "#ffffff0c"};
     --text-color: #fff;
     border: 1px solid ${(props) => props.textStyle?.color || "#ffffff"};
+  }
+`;
+
+export const Icon = styled.button<ButtonProps>`
+  ${baseStyles}
+  ${({ size }) => sizesByProp[size ?? "medium"]}
+  background-color: ${(props) => props.bgColor || "transparent"};
+  color: ${(props) => props.textStyle?.color || "#ffffff"};
+  border: none;
+  padding: 0;
+  &:hover {
+    background-color: ${(props) => props.hoverBgColor || "#141414ff"};
   }
 `;

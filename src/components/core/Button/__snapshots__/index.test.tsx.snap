@@ -49,6 +49,7 @@ exports[`Button Props - Bg Color Should render a button with a bg color 1`] = `
 <button
   bgcolor="red"
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -109,6 +110,7 @@ exports[`Button Props - Disabled Should render a disabled button 1`] = `
 
 <button
   class="c0"
+  data-testid="button"
   disabled=""
 >
   <p
@@ -170,6 +172,7 @@ exports[`Button Props - Hover Bg Color Should render a button with a hover bg co
 
 <button
   class="c0"
+  data-testid="button"
   hoverbgcolor="red"
 >
   <p
@@ -228,6 +231,7 @@ exports[`Button Props - Size Should render a button with a full size 1`] = `
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -288,6 +292,7 @@ exports[`Button Props - Size Should render a button with a large size 1`] = `
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -348,6 +353,7 @@ exports[`Button Props - Size Should render a button with a medium size 1`] = `
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -408,6 +414,7 @@ exports[`Button Props - Size Should render a button with a small size 1`] = `
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -470,6 +477,7 @@ exports[`Button Props - Variant Should render a button with a outline variant 1`
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -530,6 +538,7 @@ exports[`Button Props - Variant Should render a button with a primary variant 1`
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -590,6 +599,7 @@ exports[`Button Props - Variant Should render a button with a secondary variant 
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"
@@ -650,6 +660,7 @@ exports[`Button Should render a button 1`] = `
 
 <button
   class="c0"
+  data-testid="button"
 >
   <p
     class="c1"

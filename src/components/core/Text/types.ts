@@ -1,7 +1,21 @@
-export type TextProps = {
-  as?: "p" | "span" | "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "a";
+export type TextAs =
+  | "p"
+  | "span"
+  | "div"
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "h6"
+  | "a";
+export type TextWeight = "light" | "normal" | "medium" | "semibold" | "bold";
+export type TextAlign = "left" | "center" | "right";
+
+export interface TextProps extends React.PropsWithChildren {
+  as?: TextAs;
   size?: string;
-  weight?: "light" | "normal" | "medium" | "semibold" | "bold";
+  weight?: TextWeight;
   color?: string;
-  align?: "left" | "center" | "right";
-} & React.PropsWithChildren;
+  align?: TextAlign;
+}

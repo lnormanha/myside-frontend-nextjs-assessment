@@ -12,8 +12,10 @@ const config: Config = {
   testEnvironment: "jsdom",
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  transformIgnorePatterns: ["/node_modules/(?!(lucide-react)/)"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    "^lucide-react$": "<rootDir>/src/mocks/lucide.ts",
   },
 };
 

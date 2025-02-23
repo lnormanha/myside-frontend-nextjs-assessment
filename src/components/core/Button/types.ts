@@ -1,9 +1,9 @@
 import { TextProps } from "../Text/types";
 
-export type ButtonVariants = "primary" | "secondary" | "outline";
-export type ButtonSizes = "small" | "medium" | "large" | "full";
+export type ButtonVariants = "primary" | "secondary" | "outline" | "icon";
+export type ButtonSizes = "small" | "medium" | "large" | "full" | "icon";
 
-export type ButtonProps = {
+export interface ButtonProps extends React.PropsWithChildren {
   variant?: ButtonVariants;
   size?: ButtonSizes;
   textStyle?: TextProps;
@@ -11,4 +11,5 @@ export type ButtonProps = {
   hoverBgColor?: string;
   disabled?: boolean;
   onClick?: () => void;
-} & React.PropsWithChildren;
+  dataTestId?: string;
+}

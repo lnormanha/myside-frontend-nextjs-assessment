@@ -1,7 +1,7 @@
 "use client";
 import { ComponentType } from "react";
 import { ButtonProps, ButtonVariants } from "./types";
-import { Primary, Secondary, Outline } from "./styles";
+import { Primary, Secondary, Outline, Icon } from "./styles";
 import { Text } from "../Text";
 
 export const Button = ({
@@ -13,11 +13,13 @@ export const Button = ({
   bgColor,
   textStyle,
   hoverBgColor,
+  dataTestId = "button",
 }: ButtonProps) => {
   const variantsByProp: Record<ButtonVariants, ComponentType<ButtonProps>> = {
     primary: Primary,
     secondary: Secondary,
     outline: Outline,
+    icon: Icon,
   };
 
   const Component = variantsByProp[variant];
@@ -26,7 +28,24 @@ export const Button = ({
     primary: "#000",
     secondary: "#FFF",
     outline: "#FFF",
+    icon: "#FFF",
   };
+
+  if (variant === "icon") {
+    return (
+      <Component
+        size="icon"
+        disabled={disabled}
+        onClick={onClick}
+        bgColor={bgColor}
+        hoverBgColor={hoverBgColor}
+        textStyle={textStyle}
+        data-testid={dataTestId}
+      >
+        {children}
+      </Component>
+    );
+  }
 
   return (
     <Component
@@ -36,6 +55,7 @@ export const Button = ({
       bgColor={bgColor}
       hoverBgColor={hoverBgColor}
       textStyle={textStyle}
+      data-testid={dataTestId}
     >
       <Text
         size="16px"
